@@ -27,6 +27,8 @@ class Events(models.Model):
     event_name = models.CharField(max_length=128)
     event_date = models.DateTimeField()
 
+    def __str__(self):
+        return f'{self.event_name} | {self.event_date}'
 
 
 

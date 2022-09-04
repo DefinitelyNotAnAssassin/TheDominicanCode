@@ -1,0 +1,28 @@
+{% extends 'Events/base.html' %}
+
+
+{% block title %} {% endblock %}
+
+{% block content %}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+    {% for rows in table.rows %}
+        <tr>
+            {% for column, cell in rows.items %}
+            <td>{{cell}}</td>
+            {% endfor %}
+        </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

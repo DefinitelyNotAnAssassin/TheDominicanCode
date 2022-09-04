@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'Events.apps.EventsConfig',
     'django_tables2',
     'Models.apps.ModelsConfig',
     "UserInterface.apps.UserinterfaceConfig",
