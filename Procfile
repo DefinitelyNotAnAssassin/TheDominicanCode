@@ -1,1 +1,1 @@
-web gunicorn TheDominicanCode.wsgi:application --log-file
+web: gunicorn TheDominicanCode.wsgi
