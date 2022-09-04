@@ -12,7 +12,7 @@ def index(request):
     return render(request, "UserInterface/index.html", context =items )
 
 def view_article(request, article_name):
-    article = Articles.objects.get(title = article_name)
+    article = get_object_or_404(Articles, title = article_name)
     items = {
         'article': article
     }
