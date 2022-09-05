@@ -19,3 +19,7 @@ def view_article(request, article_name):
     return render(request, 'UserInterface/view_article.html', context=items)
 
 
+def about_page(request):
+    return render(request, 'UserInterface/about_us.html')
+
+

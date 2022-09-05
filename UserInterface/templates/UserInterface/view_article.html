@@ -4,6 +4,20 @@
 {% block title %}   {{article.title}}   {% endblock %}
 
 
+{% block head %}
+
+<style>
+    .content{
+        max-width: 75vw;
+        font-size: large;
+        padding-left: 10vw;
+        text-indent: 30px;
+    }
+
+</style>
+
+{% endblock %}
+
 {% block content %}
 
 
@@ -15,7 +29,10 @@
 <center><h3 class="font-monospace mt-5">{{article.title}}</h3></center>
 
 <div class="row">
-    <div class="col">{{article.content}}</div>
+    <div class="col mx-3 mx-3">
+        
+        <p class="content">{{article.content}}</p>
+    </div>
    
 </div>
 
