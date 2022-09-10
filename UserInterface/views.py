@@ -23,3 +23,12 @@ def about_page(request):
     return render(request, 'UserInterface/about_us.html')
 
 
+def articles_page(request):
+    article = Articles.objects.all().order_by('-date_created')
+    print(article)
+    items = {
+        'articles': article
+
+    }
+    return render(request, 'UserInterface/articles.html', context = items)
+

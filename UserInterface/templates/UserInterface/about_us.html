@@ -5,7 +5,12 @@
   .spacer-50 {
     height: 50vh;
   }
+
+
+ 
 </style>
+
+<!-- The only reason I'm using inline styling is because I'm too lazy to learn how to handle static files in django. -->
 
 {% endblock head %} {% block content %}
 
@@ -38,39 +43,215 @@
     class="d-flex flex-column  justify-content-center align-items-center"
   >
     <div class="align-items-center">
-      <div class="col-md-12 mb-2">
-        <h1 class="font-monospace">Name of the Council</h1>
-      </div>
-
-      <div class="col-md-12 mb-2">
-        <center>
-          <h6 class="font-monospace mt-4">
-            Position
-          </h6>
-        </center>
-      </div>
-      <div class="col-md-12 mb-2 mt-5">
-        <h3>OR ... like this </h3>
-      </div>
-
 
       <div class="col-md-12 mb-2 mt-5 mt-3">
 
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.pngitem.com/pimgs/m/661-6619328_default-avatar-png-blank-person-transparent-png.png" class="card-img-top" alt="...">
+
+        <!-- President -->
+        <div class="card mx-auto mt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/293118973_5248128015270592_5515912557444422477_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFEN4NrK7Eu-D1eC_v-kNKzpmtcVHrR8yOma1xUetHzI_iwqMgyKQN41BcYX2MdwLKszm3mwtpGbJoJTDm6_eS7&_nc_ohc=ZeLt8QV66mAAX8uYjt6&_nc_ht=scontent.fmnl17-1.fna&oh=00_AT-23u72u64Wfdmx5etSe8b0UU8a30bvhvTb7lY8AD_hfA&oe=6320713F" class="rounded-circle" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Name of the council member</h5>
-              <h6 class="card-title">Position</h6>
-              <p class="card-text">Some description / information about the member</p>
-              <a href="#" class="btn btn-transparent">Social Media Link <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <h5 class="card-title">Aerhon Magtira</h5>
+              <h6 class="card-title">President</h6>
+              <p class="card-text">The mastermind of the organization. He is ... ... .. ... .... </p>
+              <a href="https://www.facebook.com/aerhon.magtira" class="btn btn-transparent social-media"> @aerhon.magtira <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
               </svg></a>
-              <a href="#" class="btn btn-transparent">Social Media Link <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-              </svg></a>
+              
             </div>
           </div>
 
+        <!-- Internal Vice President -->
+
+          <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+            <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.6435-9/53348945_2064010037233182_4116493902859468800_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHyFuwtDygXe10Yb04KqYNS3mVVDmHgNmLeZVUOYeA2YobXoiJ9dWxx2z688WUaYvB3mR1aqkv_7kRfTL3t4JHl&_nc_ohc=kI1a8kn_VqEAX8ZPkt9&_nc_ht=scontent.fmnl17-4.fna&oh=00_AT8mELY-sEzMT2X6KLM_nRa1NWT4iXzTFg1Q1jgpWTs_xw&oe=63408B4B" class="rounded-circle" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Winmari Manzano</h5>
+                <h6 class="card-title">Internal Vice President</h6>
+                <p class="card-text">Description</p>
+                <a href="https://www.facebook.com/Winmari22/" class="btn btn-transparent social-media"> @winmari22 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg></a>
+                
+              </div>
+            </div>
+
+        <!-- External Vice President-->
+
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/283774202_668809537750523_1813198051242370891_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeF-j6MTXI2mjgPKrR4TP77rsC125T46kgSwLXblPjqSBAlVPphgwNqjKiuGC6ykluim3bXzlAIkLYk7V3_T-axy&_nc_ohc=3OicTXwr8PoAX9b-l8v&tn=i4wmql4wLilg6M03&_nc_ht=scontent.fmnl17-2.fna&oh=00_AT8w1lTc9p3ZzhrXNLhYQm9nrI2r6ZCT9gCWBJ_JmY_gug&oe=63208BED" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Michaela Palapar</h5>
+              <h6 class="card-title">External Vice President</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/mchlplpr0523" class="btn btn-transparent social-media"> @mchlplpr0523 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+
+        <!-- Secretary -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/299686289_2230138243830847_3270977330120572062_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEmcuVaFNq8L_qRpi9XxKU2XISdH2I-OLtchJ0fYj44u-zf7yGKgfX1IjLHsIamTQVsbolme5iY1kNl_USkZrLI&_nc_ohc=pqBm2L8LknAAX8VXNw8&_nc_ht=scontent.fmnl17-5.fna&oh=00_AT_4yDAbwSZOiT2k-ZrEZGY_eAWqnNI35-efeD5dmRwoGg&oe=63209F5E" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Alynna Lei Barcelon Marcial</h5>
+              <h6 class="card-title">Secretary</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/alynna.marcial" class="btn btn-transparent social-media"> @alynna.marcial  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- Assistant Secretary -->
+
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/286291256_5375496895847531_6504435527989260506_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEDzaOhUK6hfvb7JKTABm1vwfHosfDJSGzB8eix8MlIbN_8YIrc5gh3bVxQjvxe5AQfBCNYlrAwGPR8oP9z09S4&_nc_ohc=AmRao4DWN3oAX-zE4WT&_nc_ht=scontent.fmnl17-2.fna&oh=00_AT8uKxQB4ynvl3JVTOHAE7k3P8sJ-1C3X2JFmHQU57ERfg&oe=6321E850" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Christina Tecson</h5>
+              <h6 class="card-title">Assistant Secretary</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/gaby.tecson" class="btn btn-transparent social-media"> @christina.tecson  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- Treasurer -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/305453795_5575986729134012_4632370293489663841_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGaquyNch7lhwIP6q_culS1EfpPnkK1aBAR-k-eQrVoEMjAOFlPhUFkO91pCy7tFJT2zkf06qmcQAg_wbcgEKwp&_nc_ohc=Pu1PpHuKwpgAX8YugRt&tn=i4wmql4wLilg6M03&_nc_ht=scontent.fmnl17-2.fna&oh=00_AT-wrwHlSSUgE6PUW3Lpw09ikBeMAhfQPzXMGwFjbRkZ5w&oe=63226BB4" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nicolette Santos</h5>
+              <h6 class="card-title">Treasurer</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/nicolette.santos.545" class="btn btn-transparent social-media"> @nicolette.santos.545  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- Auditor -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/283793337_3141811206039771_2059740501173124980_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFkJpaj6oQ-IGJ-b4bJkLnaB35vBfNnoVUHfm8F82ehVXwGGw1Ib-ncBk1mhqYFE97hdJqWJozhQQvH3EKs9gUO&_nc_ohc=HWAUGZODIdwAX_pOCgB&_nc_ht=scontent.fmnl17-4.fna&oh=00_AT9LFic4tNy3Mti6m8qSbOUZucxvvQUbPQ9QlPfgptjy0w&oe=632106F8" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Janiel Paul Repas</h5>
+              <h6 class="card-title">Auditor</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/janielpaul.repas" class="btn btn-transparent social-media"> @janielpaul.repas  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+        <!-- Outreach Program Director -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t1.6435-9/130546234_3508086222613045_2173729979767222110_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHYE18x_EOmEjZ8jKAT6RO5tq1EBSkn3xS2rUQFKSffFK6cvHhiVPqLB_o2NcaXG5EWRUgtKGPcR1gyEeM9TvzH&_nc_ohc=6X8GAU1JxWYAX-UKFZ9&_nc_ht=scontent.fmnl17-5.fna&oh=00_AT8ykgEQCGTIYMvM0eUu0MsMmS4pXuD-bt0SzJFCLMld9g&oe=63412C73" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Jc Valencia</h5>
+              <h6 class="card-title">Outreach Program Director</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/jc.valencia.15" class="btn btn-transparent social-media"> @jc.valencia.15  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- Event Coordinator -->
+
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/185240700_479405376702496_2384945128044485526_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGe7bGnnRxm64jiK92ndSU-67tWPWBDxOfru1Y9YEPE54Qivl0Gzgl_RUG34tIy-WOXW4qWXSdiWwIkqD5819qN&_nc_ohc=7JXqk_IzIpgAX8PjM8H&_nc_oc=AQkG_7w_RTtPJIT-uyB4BHJl9gf4haZVWtVjTvtjVeSFnDNEQd9W2wuP0kpFNP2FAw0&tn=i4wmql4wLilg6M03&_nc_ht=scontent.fmnl17-1.fna&oh=00_AT82GhqHw-XFZKuUUd-3xjRguufFZaY9dQKCoXGMnM0gnA&oe=63421DF7" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mak Kiè</h5>
+              <h6 class="card-title">Event Coordinator</h6>
+              <p class="card-text">Description</p>
+              <a href="hhttps://www.facebook.com/mFranz.G" class="btn btn-transparent social-media"> @mFranz.G  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- Public Information Officer -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/267788597_5392056400821483_957964862516246795_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGrUwsLtRS5WllDqFL-9mz0DX1S2HWlwgENfVLYdaXCAVUTmIiGH_c-HOZZNCJbu2iu8hYuUfSPKz-HEkBcQzYb&_nc_ohc=nnWhGII2zPoAX-gB8os&_nc_ht=scontent.fmnl17-3.fna&oh=00_AT9STePYj3aVjWOxjCxLTfIAMsGzw08nxA0Wmaw5Yv_AJg&oe=6320E849" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Jianelle Kim Flores</h5>
+              <h6 class="card-title">Public Information Officer</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/Blazight" class="btn btn-transparent social-media"> @Blazight  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+
+        <!-- Digital Officer  -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-1/290600769_5406392342749484_1839055839366336814_n.jpg?stp=dst-jpg_s320x320&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeHNuonxY44gO1yqIPy5QbOUeUuFFDQ5FKR5S4UUNDkUpHTrQdczoAS6GJ-Cz0OWea3rn0fuOUSrokpcfegsZEoc&_nc_ohc=8CUri4aSZfMAX9zGxPL&_nc_ht=scontent.fmnl17-2.fna&oh=00_AT9UTWYQgQHihnxnriSM9DHx7xAB7Bkv_WAQoLJRLaOYJg&oe=63226F39" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mia Collado</h5>
+              <h6 class="card-title">Digital Officer</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/mia.collado.net" class="btn btn-transparent social-media"> @mia.collado.net  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- Fourth Year Officer -->
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.6435-9/58019507_2170022033082246_1458810329558417408_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHaAKMjreWHMVJLXUpxNWjzSCLPMkRrRtRIIs8yRGtG1BQeO4ZzrHQpx1Q6YFA2EBFbAOiqdMKYM727cZpOuQ0p&_nc_ohc=S4AnwubplLAAX86fpNA&_nc_ht=scontent.fmnl17-2.fna&oh=00_AT8AzLof0WUb1HVGvGowRcW25Y8615hVCiU0ypy2xpc4sA&oe=63415F56" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">John Benedict Abrenica</h5>
+              <h6 class="card-title">4th year Representative</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/johnbenedict.abrenica.3" class="btn btn-transparent social-media"> @johnbenedict.abrenica.3  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+        <!-- Third Year Officer -->
+
+        
+
+        <!-- Second Year Officer -->
+
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/283793337_3141811206039771_2059740501173124980_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFkJpaj6oQ-IGJ-b4bJkLnaB35vBfNnoVUHfm8F82ehVXwGGw1Ib-ncBk1mhqYFE97hdJqWJozhQQvH3EKs9gUO&_nc_ohc=HWAUGZODIdwAX_pOCgB&_nc_ht=scontent.fmnl17-4.fna&oh=00_AT9LFic4tNy3Mti6m8qSbOUZucxvvQUbPQ9QlPfgptjy0w&oe=632106F8" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Janiel Paul Repas</h5>
+              <h6 class="card-title">Second year Representative</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/janielpaul.repas" class="btn btn-transparent social-media"> @janielpaul.repas  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
+
+        <!-- First Year Officer -->
+
+        <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
+          <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/175909305_4093721077385719_9154266224699383270_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHLh9bdw32BfAhtljRzhnQOGLXYqbdmv4wYtdipt2a_jKhZKiO6KNS5gym9YUpn1wpy7qNiILAF7Nj7rIEt43NK&_nc_ohc=1khK9NdAq_YAX84RDkt&_nc_ht=scontent.fmnl17-1.fna&oh=00_AT_GoIR8TvAab0EJNn5DwAIutK6spcLX8w-jWl8yn1cdGw&oe=6340AEB4" class="rounded-circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sherry Castillo</h5>
+              <h6 class="card-title">First year Representative</h6>
+              <p class="card-text">Description</p>
+              <a href="https://www.facebook.com/shrrycastll" class="btn btn-transparent social-media"> @shrrycastll  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a>
+              
+            </div>
+          </div>
 
       </div>
     </div>
@@ -79,3 +260,19 @@
 
 
 {% endblock content %}
+
+
+{% block script %}
+<script>
+
+
+
+
+
+
+
+
+</script>
+
+
+{% endblock script %}

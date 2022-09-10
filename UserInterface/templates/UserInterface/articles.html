@@ -1,0 +1,21 @@
+{% extends 'UserInterface/base.html' %}
+
+{% block title %} Organization Name | Articles {% endblock %}
+
+{% block content %}
+
+
+<center><h2 class="font-monospace">Latest Articles</h2></center>
+{% for article in articles %}
+
+<div class="card mt-1">
+    <div class="card-body">
+        <h4 class="font-monospace card-title">{{article.title}}</h4>
+        <h5 class="font-monospace card-text">{{article.author}}</h5>
+    </div>
+</div>
+
+{% endfor %}
+
+
+{% endblock content %}
