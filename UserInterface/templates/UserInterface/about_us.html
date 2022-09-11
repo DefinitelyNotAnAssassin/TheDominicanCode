@@ -91,7 +91,6 @@
             </div>
           </div>
 
-
         <!-- Secretary -->
         <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
           <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/299686289_2230138243830847_3270977330120572062_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEmcuVaFNq8L_qRpi9XxKU2XISdH2I-OLtchJ0fYj44u-zf7yGKgfX1IjLHsIamTQVsbolme5iY1kNl_USkZrLI&_nc_ohc=pqBm2L8LknAAX8VXNw8&_nc_ht=scontent.fmnl17-5.fna&oh=00_AT_4yDAbwSZOiT2k-ZrEZGY_eAWqnNI35-efeD5dmRwoGg&oe=63209F5E" class="rounded-circle" alt="...">
@@ -167,7 +166,7 @@
         <div class="card mx-auto mt-5 pt-5 border-0 " style="width: 20rem;">
           <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/185240700_479405376702496_2384945128044485526_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGe7bGnnRxm64jiK92ndSU-67tWPWBDxOfru1Y9YEPE54Qivl0Gzgl_RUG34tIy-WOXW4qWXSdiWwIkqD5819qN&_nc_ohc=7JXqk_IzIpgAX8PjM8H&_nc_oc=AQkG_7w_RTtPJIT-uyB4BHJl9gf4haZVWtVjTvtjVeSFnDNEQd9W2wuP0kpFNP2FAw0&tn=i4wmql4wLilg6M03&_nc_ht=scontent.fmnl17-1.fna&oh=00_AT82GhqHw-XFZKuUUd-3xjRguufFZaY9dQKCoXGMnM0gnA&oe=63421DF7" class="rounded-circle" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Mak Kiè</h5>
+              <h5 class="card-title">Mark Francis Galan</h5>
               <h6 class="card-title">Event Coordinator</h6>
               <p class="card-text">Description</p>
               <a href="hhttps://www.facebook.com/mFranz.G" class="btn btn-transparent social-media"> @mFranz.G  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -265,8 +264,103 @@
 {% block script %}
 <script>
 
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+var mouseCard = false
 
 
+// set timer-variable
+var timer = null;
+
+
+    
+
+
+function waitFunction () {
+
+    console.log ('I want to see this 1 second after the LAST click');
+    
+}
+
+
+
+let list_card = document.querySelectorAll('.card')
+
+list_card.forEach(card => {
+  card.addEventListener('mouseenter', function(){
+      mouseCard = true
+      if (timer) {
+    
+        clearTimeout (timer);
+        timer = null;
+    
+    }
+    
+    //set new timeout
+    timer = setTimeout (function () {
+    
+            //call wait-function and clear timeout
+            setBackgroundIn ('black', 'white');
+            clearTimeout (timer);
+            timer = null;
+            
+    }, 3000);
+  })
+
+  card.addEventListener('mouseleave', async function(){
+    mouseCard = false 
+    if (timer) {
+    
+      clearTimeout (timer);
+      timer = null;
+  
+  }
+  
+  //set new timeout
+  timer = setTimeout (function () {
+  
+          //call wait-function and clear timeout
+          setBackgroundOut ('white', 'black');
+          clearTimeout (timer);
+          timer = null;
+          
+  }, 15000);
+  })
+
+})
+
+function setBackgroundOut(bg, color){
+  if (mouseCard === false){
+  document.body.style.background = bg
+  document.body.style.color = color
+  document.body.style.transition = '1s all'
+  list_card.forEach(card => {
+    card.style.background = bg
+    card.style.color = color
+    card.style.transition = '0.8s all'
+  })
+
+  
+  }
+}
+
+
+function setBackgroundIn(bg, color){
+  if (mouseCard === true){
+  document.body.style.background = bg
+  document.body.style.color = color
+  document.body.style.transition = '1s all'
+  list_card.forEach(card => {
+    card.style.background = bg
+    card.style.color = color
+    card.style.transition = '0.8s all'
+  })
+
+  
+  }
+}
 
 
 
