@@ -9,7 +9,7 @@ def index(request):
     list_articles = Articles.objects.all()
     items = {
         'articles': list_articles,
-        'table': ArticlesTable(Articles.objects.all())
+        'table': ArticlesTable(Articles.objects.all().order_by('-date_created'))
     }
     return render(request, "UserInterface/index.html", context =items )
 
@@ -27,9 +27,9 @@ def about_page(request):
 
 def articles_page(request):
     article = Articles.objects.all().order_by('-date_created')
-    print(article)
+    
     items = {
-        'articles': article
+        'table' : ArticlesTable(data = article)
 
     }
     return render(request, 'UserInterface/articles.html', context = items)

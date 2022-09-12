@@ -5,17 +5,52 @@
 {% block content %}
 
 
-<center><h2 class="font-monospace">Latest Articles</h2></center>
-{% for article in articles %}
 
-<div class="card mt-1">
-    <div class="card-body">
-        <h4 class="font-monospace card-title">{{article.title}}</h4>
-        <h5 class="font-monospace card-text">{{article.author}}</h5>
-    </div>
-</div>
+<center><h3 class="font-monospace mt-4 mb-4">Latest Announcements</h3></center>
+<table class="table">
+  <thead>
+    <tr>
+    <th>Author</th>
+    <th>Date Created</th>
+    <th>Title</th>
+  </tr>
+  </thead>
+
+  
+{% for row in table.rows %}
+  <tr onclick="gen(this)">
+    {% for column, cell in row.items %}
+    <td>{{cell}}</td>
+
+    {% endfor %}
+
+  </tr>
 
 {% endfor %}
 
 
+
+</table>
+
 {% endblock content %}
+
+{% block script %}
+
+
+<script type="text/javascript" charset="utf-8">
+  function gen(e){
+var Author = e.getElementsByTagName("td")["0"].innerText
+var date =  e.getElementsByTagName("td")["1"].innerText
+var title = e.getElementsByTagName("td")["2"].innerText
+
+
+window.location.href = `/articles/${title}`
+  
+ 
+
+
+}
+</script>
+
+{% endblock script %}
+
