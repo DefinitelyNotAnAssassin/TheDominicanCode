@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from Models.models import Events, Articles
 from .tables import ArticlesTable
+from .form import RegisterForm
+
 # Create your views here.
 
 def index(request):
@@ -32,3 +34,29 @@ def articles_page(request):
     }
     return render(request, 'UserInterface/articles.html', context = items)
 
+def register_page(request):
+
+    if request.method == "GET":
+        items = {
+            'form': RegisterForm()
+        }
+        return render(request, 'UserInterface/register.html', context = items)
+
+    elif request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+            return HttpResponse("An organization representative would contact you soon.")
+        else:
+            items = {
+                'form' : form
+            }
+            return render(request,'UserInterface/error.html',context = items)
+
+    else:
+        return HttpResponse("Invalid Request Method. Bad HTTP Header.")
+
+
+def contact_us(request):
+    return render(request, 'UserInterface/contact_us.html')

@@ -1,0 +1,46 @@
+{% extends "UserInterface/base.html" %}
+
+
+{% block title %} Registration Page {% endblock title %}
+
+
+
+{% block head %} 
+
+
+<style>
+
+    .form-control{
+        width: 50vw!important;
+    }
+</style>
+
+
+{% endblock head %}
+
+
+{% block content %}
+
+<div class ="d-flex flex-column min-vh-100 justify-content-center align-items-center">  
+    <form action = "/register" method = "post">
+     <div class="form-row align-items-center">
+
+        {% for field in form %}
+        <div class="col-md-12 mb-2 pt-3">
+            {{field}}
+            
+        </div>
+       
+       
+        {% endfor %}
+        {% csrf_token %}
+        
+            <button class = "btn btn-dark col-md-12 mb-2 mt-3 " type="submit">Register</button>
+      
+   
+   </div>
+   </form>
+   </div>
+
+
+{% endblock content %}

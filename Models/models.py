@@ -1,5 +1,8 @@
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.utils.timezone import now
+from django.db.models.functions import Lower
 # Create your models here.
 
 class OrganizationAccount(AbstractUser):
@@ -18,7 +21,7 @@ class Articles(models.Model):
     author = models.ForeignKey(OrganizationAccount, on_delete=models.CASCADE)
     content = models.CharField(max_length=1250)
     date_created = models.DateTimeField()
-    title = models.CharField(max_length=64, default="Untitled")
+    title = models.CharField(max_length=64, default="Untitled", unique=True)
 
     def __str__(self):
         return f'{self.author} / {self.title} '
@@ -29,6 +32,26 @@ class Events(models.Model):
 
     def __str__(self):
         return f'{self.event_name} | {self.event_date}'
+
+
+class RegisterList(models.Model):
+    date = models.DateField(default=now)
+    name = models.CharField(max_length=32)
+    program = models.CharField(max_length=32)
+    level = models.CharField(max_length=16)
+    facebook_link = models.CharField(max_length=64)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                Lower('name'),
+                name = 'name_unique'
+            )
+        ]
+        unique_together = ('name', 'program', 'level')
+        
+    def __str__(self):
+        return f"{self.date} / {self.name} / {self.program} - {self.level}"
 
 
 
