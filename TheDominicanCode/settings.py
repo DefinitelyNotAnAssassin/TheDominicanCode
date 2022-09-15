@@ -83,10 +83,16 @@ WSGI_APPLICATION = 'TheDominicanCode.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'da9775i4ik506f',
+        'USER': 'cuixrvrdehamrb',
+        'PASSWORD': 'd18d29448f6962e38ef21f0acf354e46e23a40bb1ce5b0ceca781a9821f75379',
+        'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',
+        'PORT':  '5432'
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
