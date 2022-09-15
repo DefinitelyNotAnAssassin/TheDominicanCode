@@ -10,13 +10,15 @@ class OrganizationAccount(AbstractUser):
     OrgRole = [('President', 'President'),('Internal VP', 'Internal Vice President'), ('External VP', 'External Vice President'),
     ('Treasurer', 'Treasurer'), ('Secretary', 'Secretary'), 
     ("Assistant Secretary", "Assistant Secretary"), ("Auditor", "Auditor"), ("Outreach Program Director", "Outreach Program Director"), ("Event Coordinator", "Event Coordinator"),
-    ("Digital Officer", "Digital Officer"), ("Representative", "Representative"), ('Member', 'Member')
+    ("Public Information Officer", "Public Information Officer"), ("Digital Officer", "Digital Officer"), ("Representative", "Representative"), ('Member', 'Member')
     
     
     ]
     role = models.CharField(choices = OrgRole, max_length=32)
-    image_link = models.CharField(max_length=128, default = "https://doctoritas.com/blank-person/?lang=en")
+    image_link = models.CharField(max_length=555, default = "https://preview.redd.it/h5gnz1ji36o61.png?width=225&format=png&auto=webp&s=84379f8d3bbe593a2e863c438cd03e84c8a474fa")
     description = models.CharField(max_length=255, default="Description")
+    facebook_link = models.CharField(max_length=555, default = "https://www.facebook.com")
+
     REQUIRED_FIELDS = ["role"]
 
     def __str__(self):

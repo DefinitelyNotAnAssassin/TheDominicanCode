@@ -22,7 +22,11 @@ def view_article(request, article_name):
 
 
 def about_page(request):
-    return render(request, 'UserInterface/about_us.html')
+    org_members = OrganizationAccount.objects.exclude(role = "Member")
+    items = {
+        'members': org_members
+    }
+    return render(request, 'UserInterface/about_us.html', context = items)
 
 
 def articles_page(request):
@@ -59,8 +63,5 @@ def register_page(request):
 
 
 def contact_us(request):
-    org_members = OrganizationAccount.objects.all()
-    items = {
-        'members': org_members
-    }
-    return render(request, 'UserInterface/contact_us.html', context = items)
+    
+    return render(request, 'UserInterface/contact_us.html')
