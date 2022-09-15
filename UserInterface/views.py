@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
-from Models.models import Events, Articles
+from Models.models import Events, Articles, OrganizationAccount
 from .tables import ArticlesTable
 from .form import RegisterForm
 
@@ -59,4 +59,8 @@ def register_page(request):
 
 
 def contact_us(request):
-    return render(request, 'UserInterface/contact_us.html')
+    org_members = OrganizationAccount.objects.all()
+    items = {
+        'members': org_members
+    }
+    return render(request, 'UserInterface/contact_us.html', context = items)

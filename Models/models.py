@@ -1,4 +1,5 @@
 
+from symbol import factor
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.timezone import now
@@ -7,11 +8,15 @@ from django.db.models.functions import Lower
 
 class OrganizationAccount(AbstractUser):
     OrgRole = [('President', 'President'),('Internal VP', 'Internal Vice President'), ('External VP', 'External Vice President'),
-    ('Treasurer', 'Treasurer'), ('Secretary', 'Secretary'), ('Member', 'Member')
+    ('Treasurer', 'Treasurer'), ('Secretary', 'Secretary'), 
+    ("Assistant Secretary", "Assistant Secretary"), ("Auditor", "Auditor"), ("Outreach Program Director", "Outreach Program Director"), ("Event Coordinator", "Event Coordinator"),
+    ("Digital Officer", "Digital Officer"), ("Representative", "Representative"), ('Member', 'Member')
     
     
     ]
     role = models.CharField(choices = OrgRole, max_length=32)
+    image_link = models.CharField(max_length=128, default = "https://doctoritas.com/blank-person/?lang=en")
+    description = models.CharField(max_length=255, default="Description")
     REQUIRED_FIELDS = ["role"]
 
     def __str__(self):
